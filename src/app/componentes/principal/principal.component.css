@@ -1,6 +1,8 @@
 .imagenDeMenu{
 width: 80px;
 height: 70px;
+border-radius: 100px;
+border: 2px solid;
 }
 
 .hero-text {
@@ -11,3 +13,17 @@ height: 70px;
     transform: translate(-50%, -50%);
     color: #100000;
     }
+
+.transparent-style{
+    background-color: rgba(34, 122, 173, 0.1);
+    border:none !important;
+    }
+
+.bordesolido{
+        border-color: #2e996d;
+        border-width: 3px;
+        border-radius: 25px 25px 25px 25px;
+        -moz-border-radius: 25px 25px 25px 25px;
+        -webkit-border-radius: 25px 25px 25px 25px;
+        border: 2px solid #000000;
+     }
