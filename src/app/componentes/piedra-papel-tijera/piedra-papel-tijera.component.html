@@ -1,0 +1,42 @@
+<br><br>
+<div align="center">
+<b>PIEDRA, PAPEL O  TIJERA</b>
+</div>
+<br><br><br>
+<table border="0" width="60%" height="auto" align="center">
+    <tr>
+        <td><img src="./assets/imagenes/piedra.jpg" border="1" width="200px" height="120px" (click)="juegoPPT.Piedra()"></td>
+        <td><img src="./assets/imagenes/papel.jpg" border="1" width="200px" height="120px" (click)="juegoPPT.Papel()"></td>
+        <td><img src="./assets/imagenes/tijera.jpg" border="1" width="200px" height="120px" (click)="juegoPPT.Tijera()"></td>
+    </tr>
+</table>
+
+<br><br>
+<div *ngIf="juegoPPT.numeroRandom==1" align="center">
+    <img src="./assets/imagenes/piedra.jpg" border="1" width="200px" height="120px">
+</div>
+
+<div *ngIf="juegoPPT.numeroRandom==2" align="center">
+    <img src="./assets/imagenes/papel.jpg" border="1" width="200px" height="120px">
+</div>
+
+<div *ngIf="juegoPPT.numeroRandom==3" align="center">
+    <img src="./assets/imagenes/tijera.jpg" border="1" width="200px" height="120px">
+</div>
+
+
+
+
+
+<br><br>
+<div *ngIf="juegoPPT.resultado=='Gano'" align="center">
+    <h2> Gano</h2>
+</div>
+
+<div *ngIf="juegoPPT.resultado=='Perdio'" align="center">
+    <h2> Perdio</h2>
+</div>
+
+<div *ngIf="juegoPPT.resultado=='Empato'" align="center">
+    <h2> Empato</h2>
+</div>

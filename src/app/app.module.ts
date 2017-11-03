@@ -53,6 +53,9 @@ import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { ColoresComponent } from './componentes/colores/colores.component';
+import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { PiedraPapelTijeraMasListadoComponent } from './componentes/piedra-papel-tijera-mas-listado/piedra-papel-tijera-mas-listado.component';
+import { ColoresMasListadoComponent } from './componentes/colores-mas-listado/colores-mas-listado.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +81,10 @@ import { ColoresComponent } from './componentes/colores/colores.component';
     JugadoresListadoComponent,
     InputJugadoresComponent,
     SexoPipe,
-    ColoresComponent
+    ColoresComponent,
+    PiedraPapelTijeraComponent,
+    PiedraPapelTijeraMasListadoComponent,
+    ColoresMasListadoComponent
   ],
   imports: [
     BrowserModule,
