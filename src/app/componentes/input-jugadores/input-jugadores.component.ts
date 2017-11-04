@@ -9,7 +9,11 @@ export class InputJugadoresComponent implements OnInit {
 
   constructor() { }
 
+  miJson= {nombre:"Asjads",ape:"sads"};
+
   ngOnInit() {
+
+    localStorage.setItem('token', JSON.stringify(this.miJson));
   }
 
 }

@@ -1,53 +1,108 @@
 <div class="container" align="center">
-    <div class="card">
-      <img class="img-thumbnail"   src="./assets/imagenes/cerebro.jpg" alt="Avatar" style="width:100%">
-      <h1>Velocidad y agilidad aritmética </h1>
-      <p class="title">Juego de agilidad mental</p>
-      <p>UTN FRA </p>
-  
-      <a href="#"><i class="fa fa-dribbble"></i></a> 
-      <a href="#"><i class="fa fa-twitter"></i></a> 
-      <a href="#"><i class="fa fa-linkedin"></i></a> 
-      <a href="#"><i class="fa fa-facebook"></i></a> 
-      <p>           <button class="button"  (click)="Juego('Agilidad')">Jugar</button></p>
     
-    </div>
-  
-    <div class="card">
-      <img class="img-thumbnail" src="./assets/imagenes/ppt.jpg" alt="Avatar" style="width:100%">
-      <h1>Piedra Papel o Tijera</h1>
-      <p class="title">Juega contra la máquina</p>
-      <p>UTN FRA </p>
-      
-      <a href="#"><i class="fa fa-dribbble"></i></a> 
-      <a href="#"><i class="fa fa-twitter"></i></a> 
-      <a href="#"><i class="fa fa-linkedin"></i></a> 
-      <a href="#"><i class="fa fa-facebook"></i></a> 
-      <p>           <button class="button"  (click)="Juego('PPT')">Jugar</button></p>
-    </div>
-    <div class="card">
-      <img  class="img-thumbnail"  src="./assets/imagenes/adivina.png" alt="Avatar" style="width:100%">
-      <h1>Adivina el número secreto</h1>
-      <p class="title">Juega de estrategia</p>
-      <p>UTN FRA </p>
-      
-      <a href="#"><i class="fa fa-dribbble"></i></a> 
-      <a href="#"><i class="fa fa-twitter"></i></a> 
-      <a href="#"><i class="fa fa-linkedin"></i></a> 
-      <a href="#"><i class="fa fa-facebook"></i></a> 
-      <p>           <button class="button"  (click)="Juego('Adivina')">Jugar</button></p>
+    <div class="row row-margin-bottom">
+    <div class="col-md-5 no-padding lib-item" data-category="view">
+        <div class="lib-panel">
+            <div class="row box-shadow">
+                <div class="col-md-6">
+                    <img class="imagen" src="./assets/imagenes/cerebro.jpg">
+                </div>
+                <div class="col-md-6">
+                    <div class="lib-row lib-header">
+                        VELOCIDAD Y AGILIDAD ARITMETICA
+                        <div class="lib-header-seperator"></div>
+                    </div>
+                    <div class="lib-row lib-desc">
+                        Juego de agilidad mental
+                    </div><br>
+                    <p> <button class="btn btn-primary"  (click)="Juego('Agilidad')">Jugar</button></p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-        <img  class="img-thumbnail"  src="./assets/imagenes/colores.jpg" alt="Avatar" style="width:100%">
-        <h1>Unifica el color de los botones</h1>
-        <p class="title">Descubre el patron</p>
-        <p>UTN FRA </p>
-        
-        <a href="#"><i class="fa fa-dribbble"></i></a> 
-        <a href="#"><i class="fa fa-twitter"></i></a> 
-        <a href="#"><i class="fa fa-linkedin"></i></a> 
-        <a href="#"><i class="fa fa-facebook"></i></a> 
-        <p>           <button class="button"  (click)="Juego('Colores')">Jugar</button></p>
-      </div>
-  </div>
+    <div class="col-md-1"></div>
+        <div class="col-md-5 no-padding lib-item" data-category="view">
+            <div class="lib-panel">
+                <div class="row box-shadow">
+                    <div class="col-md-6">
+                        <img class="imagen" src="./assets/imagenes/ppt.jpg">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="lib-row lib-header">
+                            PIEDRA, PEPEL O TIJERA
+                            <div class="lib-header-seperator"></div>
+                        </div>
+                        <div class="lib-row lib-desc">
+                           Juega contra la máquina
+                        </div><br>
+                        <p> <button class="btn btn-primary"  (click)="Juego('PPT')">Jugar</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      <div class="row row-margin-bottom">
+          <div class="col-md-5 no-padding lib-item" data-category="view">
+              <div class="lib-panel">
+                  <div class="row box-shadow">
+                      <div class="col-md-6">
+                          <img class="imagen" src="./assets/imagenes/adivina.png">
+                      </div>
+                      <div class="col-md-6">
+                          <div class="lib-row lib-header">
+                              ADIVINA EL NUMERO SECRETO
+                              <div class="lib-header-seperator"></div>
+                          </div>
+                          <div class="lib-row lib-desc">
+                             Juego de estrategia
+                          </div><br>
+                          <p> <button class="btn btn-primary"  (click)="Juego('Adivina')">Jugar</button></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    <div class="col-md-1"></div>
+            <div class="col-md-5 no-padding lib-item" data-category="view">
+                <div class="lib-panel">
+                    <div class="row box-shadow">
+                        <div class="col-md-6">
+                            <img class="imagen" src="./assets/imagenes/colores.jpg">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="lib-row lib-header">
+                                COLORES
+                                <div class="lib-header-seperator"></div>
+                            </div>
+                            <div class="lib-row lib-desc">
+                                Unifica el color de los botones
+                            </div><br>
+                            <p> <button class="btn btn-primary"  (click)="Juego('colores')">Jugar</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <div class="row row-margin-bottom">
+              <div class="col-md-5 no-padding lib-item" data-category="view">
+                  <div class="lib-panel">
+                      <div class="row box-shadow">
+                          <div class="col-md-6">
+                              <img class="imagen" src="./assets/imagenes/colores.jpg">
+                          </div>
+                          <div class="col-md-6">
+                              <div class="lib-row lib-header">
+                                  ANAGRAMA
+                                  <div class="lib-header-seperator"></div>
+                              </div>
+                              <div class="lib-row lib-desc">
+                                  Ordena la palabra
+                              </div><br>
+                              <p> <button class="btn btn-primary"  (click)="Juego('colores')">Jugar</button></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+</div>

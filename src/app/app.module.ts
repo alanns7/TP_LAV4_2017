@@ -11,6 +11,7 @@ import { HttpModule } from '@angular/http';
 // import { AccordionModule } from 'ngx-bootstrap';
 // agrego las clases para utilizar ruteo
 import { RouterModule, Routes } from '@angular/router';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { MiHttpService } from './servicios/mi-http/mi-http.service'; 
 import { PaisesService } from './servicios/paises.service'; 
@@ -84,13 +85,14 @@ import { ColoresMasListadoComponent } from './componentes/colores-mas-listado/co
     ColoresComponent,
     PiedraPapelTijeraComponent,
     PiedraPapelTijeraMasListadoComponent,
-    ColoresMasListadoComponent
+    ColoresMasListadoComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RuteandoModule,
     HttpModule,
+    Ng2SmartTableModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })
