@@ -57,6 +57,8 @@ import { ColoresComponent } from './componentes/colores/colores.component';
 import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
 import { PiedraPapelTijeraMasListadoComponent } from './componentes/piedra-papel-tijera-mas-listado/piedra-papel-tijera-mas-listado.component';
 import { ColoresMasListadoComponent } from './componentes/colores-mas-listado/colores-mas-listado.component';
+import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
+import { AnagramaMasListadoComponent } from './componentes/anagrama-mas-listado/anagrama-mas-listado.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +88,8 @@ import { ColoresMasListadoComponent } from './componentes/colores-mas-listado/co
     PiedraPapelTijeraComponent,
     PiedraPapelTijeraMasListadoComponent,
     ColoresMasListadoComponent,
+    AnagramaComponent,
+    AnagramaMasListadoComponent,
   ],
   imports: [
     BrowserModule,

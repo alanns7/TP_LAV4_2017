@@ -23,6 +23,8 @@ import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-goo
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 import { ColoresComponent } from '../componentes/colores/colores.component';
 import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
+import { AnagramaMasListadoComponent } from '../componentes/anagrama-mas-listado/anagrama-mas-listado.component';
 
 
 // declaro donde quiero que se dirija
@@ -46,7 +48,9 @@ children:
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'Colores' , component: ColoresComponent},
-      {path: 'PiedraPapelTijera' , component: PiedraPapelTijeraComponent}
+      {path: 'PPT' , component: PiedraPapelTijeraComponent},
+      {path: 'Anagrama' , component: AnagramaComponent},
+      {path: 'AnagramaMasListado' , component: AnagramaMasListadoComponent}
     ]
 },
 {path: '**' , component: ErrorComponent},

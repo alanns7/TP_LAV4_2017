@@ -1,5 +1,9 @@
-<h1>AGILIDAD ARITMETICA</h1>
-<br><br>
+
+<div align= "center" >
+    <div style="color:rgb(106, 171, 231)">
+        <h1>AGILIDAD ARITMETICA</h1>
+    </div>
+        <br><br>
 
 <input type="text"value="{{juegoCalculo.numero1}}" name="num1">
 
@@ -7,15 +11,17 @@
 
 <input type="text" value="{{juegoCalculo.numero2}}" name="num2"><br><br>
 
-<input type="button" value="JUGAR" name="jugar" (click)="juegoCalculo.Jugar()"><br><br>
+<input type="button" class="btn btn-primary" value="JUGAR" name="jugar" (click)="juegoCalculo.Jugar()"><br><br>
 
 <input type="text" placeholder="Escribe la respuesta" [(ngModel)]="juegoCalculo.numeroIngresado" name="numeroIngresado" [ngModelOptions]="{standalone: true}" required><br><br>
 
-<input type="button" value="SIGUIENTE" name="siguiente" (click)="juegoCalculo.Siguiente()"><br><br>
+<input type="button" class="btn btn-primary" value="SIGUIENTE" name="siguiente" (click)="juegoCalculo.Siguiente()"><br><br>
 
 <p>Ronda Numero: {{juegoCalculo.ronda}}</p>
 
 <div *ngIf="juegoCalculo.contador==3">
 <p  [hidden]="!juegoCalculo.gano"> Gano</p>
 <p [hidden]="juegoCalculo.gano"> No Gano</p>
+</div>
+
 </div>

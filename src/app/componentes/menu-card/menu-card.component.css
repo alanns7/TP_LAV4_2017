@@ -1,7 +1,7 @@
 body {
     padding: 20px;
     font-family: 'Open Sans', sans-serif;
-    background-color: #f7f7f7;
+    background-color: #000307;
 }
 
 .lib-panel {
@@ -15,7 +15,7 @@ body {
 .lib-panel .row,
 .lib-panel .col-md-6 {
     padding: 0;
-    background-color: #FFFFFF;
+    background-color: #000307;
 }
 
 
@@ -24,7 +24,7 @@ body {
 }
 
 .lib-panel .lib-row.lib-header {
-    background-color: #FFFFFF;
+    background-color: #000307;
     font-size: 20px;
     padding: 10px 20px 0 20px;
 }
@@ -66,4 +66,9 @@ body {
 .imagen{
     height: 190px;
     width: 220px;
+}
+
+.colorLetra{
+    color:rgb(106, 169, 224);
+    font-family: cursive; 
 }
