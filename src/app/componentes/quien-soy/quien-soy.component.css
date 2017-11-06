@@ -1,43 +1,35 @@
-.imagenDeQuienSoy{
-    width: 100%;
-   
-    }
-body {
-    font: 20px Montserrat, sans-serif;
-    line-height: 1.8;
-    color: #f5f6f7;
+/* You can add global styles to this file, and also import other style files */
+.capaFoto{ 
+    position:absolute; 
+    z-index:0; 
+    top:52px;
+    
+} 
+
+.titulo{
+    position:absolute; 
+    top: 50px; 
+    left: 700px;
+    font-family: cursive; 
 }
-p {font-size: 16px;}
-.margin {margin-bottom: 45px;}
-.bg-1 { 
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
+.capaTexto1{
+    position:absolute; 
+    z-index:1;
+    top: 180px; 
+    left: 70px;
+    font-size: 180%;
+    font-family: cursive; 
 }
-.bg-2 { 
-    background-color: #474e5d; /* Dark Blue */
-    color: #ffffff;
+
+.capaTexto2{
+    position:absolute; 
+    z-index:1;
+    top: 180px; 
+    left: 1000px;
+    font-size: 180%;
+    font-family: cursive; 
 }
-.bg-3 { 
-    background-color: #ffffff; /* White */
-    color: #555555;
-}
-.bg-4 { 
-    background-color: #2f2f2f; /* Black Gray */
-    color: #fff;
-}
-.container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-.navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-}
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
+.menu{
+    position:relative; 
+    z-index:1; 
 }
