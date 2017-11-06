@@ -1,17 +1,17 @@
-<br><br>
-<div align="center">
-          <b>ANAGRAMA!</b><br><br>
+
+<div align="center" class="titulo">
+          <h3>ANAGRAMA!</h3><br><br>
         </div>
-        <div align="center">
-        <b>El objetivo del juego es poder ordenar las letras expuestas de forma tal que se forme una palabra.
+        <div align="center" class="titulo">
+        <h4>El objetivo del juego es poder ordenar las letras expuestas de forma tal que se forme una palabra.
           Para ello tienes como máximo tres intentos! Que te diviertas!
-        </b>
+        </h4>
 </div><br><br>
 
 <div class="container contenedor" align="center">
     
             <br><br>
-        <h4>Tu palabra es: </h4><br>
+        <h4>Tu palabra es: </h4>
         <h1>{{miJuego.palabraAJugar}}</h1><br>
         
         <input type="text" name="palabraDelUsuario" [(ngModel)]="miJuego.palabraDelUsuario"><br><br>
@@ -20,7 +20,7 @@
 
         <input type="button" name= "Rendicion" class="btn btn-danger" (click)="miJuego.Rendirse()" value="ME RINDO" style='width:250px; height:100px'><br><br>
         
-        <div>
+        <div style="color: rgb(10, 45, 73)">
         <h3>CONTADOR: {{miJuego.contador}}</h3>
         </div>
   </div>

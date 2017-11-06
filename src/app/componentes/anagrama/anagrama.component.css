@@ -9,3 +9,8 @@
     -webkit-border-radius: 25px 25px 25px 25px;
     border: 2px solid #000000;
 }
+
+.titulo{
+    color: rgb(6, 138, 247);
+    font-family: cursive; 
+}

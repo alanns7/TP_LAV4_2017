@@ -14,6 +14,8 @@ export class ColoresComponent implements OnInit {
   public color3:String ="btn btn-primary";
   public color4:String ="btn btn-warning";
   public color5:String ="btn btn-info";
+  public contador: number=0;
+  public gano:boolean;
 
   ngOnInit() {
   }
@@ -27,6 +29,7 @@ export class ColoresComponent implements OnInit {
         this.color2=this.Next(this.color2);
         this.color4=this.Next(this.color4);
         this.color5=this.Next(this.color5);
+        this.contador++;
         break;
       }
       case "button2":
@@ -34,6 +37,7 @@ export class ColoresComponent implements OnInit {
         this.color1=this.Next(this.color1);
         this.color3=this.Next(this.color3);
         this.color4=this.Next(this.color4);
+        this.contador++;
         break;
       }
       case "button3":
@@ -41,6 +45,7 @@ export class ColoresComponent implements OnInit {
         this.color5=this.Next(this.color5);
         this.color1=this.Next(this.color1);
         this.color2=this.Next(this.color2);
+        this.contador++;
         break;
       }
       case "button4":
@@ -48,6 +53,7 @@ export class ColoresComponent implements OnInit {
         this.color1=this.Next(this.color1);
         this.color5=this.Next(this.color5);
         this.color3=this.Next(this.color3);
+        this.contador++;
         break;
       }
       case "button5":
@@ -55,12 +61,23 @@ export class ColoresComponent implements OnInit {
         this.color2=this.Next(this.color2);
         this.color3=this.Next(this.color3);
         this.color4=this.Next(this.color4);
+        this.contador++;
         break;
       }
     }
   }
 
+  Verificar()
+  {
+    if((this.color1==this.color2) && (this.color2==this.color3) && (this.color3==this.color4) &&
+    (this.color4==this.color5) && this.contador<=10)
+    {
+      this.gano=true;
+    }
+    else
+    this.gano=false;
 
+  }
 
 
 

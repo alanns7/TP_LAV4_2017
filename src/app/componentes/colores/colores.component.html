@@ -1,12 +1,12 @@
 <br><br>
-<div align="center">
-  <b>COLORES!</b><br><br>
+<div align="center" class="titulo">
+  <h3>COLORES!</h3><br>
 </div>
-<div align="center">
-<b>El objetivo del juego es poder dejar todos en un mismo color, ya sea rojo, celeste, azul, amarillo, o verde.<br>
+<div align="center" class="titulo">
+<h4>El objetivo del juego es poder dejar todos en un mismo color, ya sea rojo, celeste, azul, amarillo, o verde.<br>
   Para ello, se debe encontrar el patrón que siguen los mismos al presionarlos.
   ¡Que te diviertas!
-</b>
+</h4>
 </div>
 
 
@@ -22,6 +22,13 @@
 <input type="button" name= "button4" class="{{color4}}" (click)="Cambio('button4')" value="AQUI ESTOY" style='width:350px; height:100px'><br><br>
 
 <input type="button" name= "button5" class="{{color5}}" (click)="Cambio('button5')" value="PRUEBAME" style='width:350px; height:100px'><br><br>
+
+
+    <!-- <div *ngIf="({{contador}} <= 10) ">
+        <p  [hidden]="!juegoCalculo.gano"> Gano</p>
+        <p [hidden]="juegoCalculo.gano"> No Gano</p>
+    </div> -->
+
 
 
 </div>
