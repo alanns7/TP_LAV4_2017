@@ -22,7 +22,7 @@ export class ListadoDeResultadosComponent implements OnInit {
  data: Array<any>;
  
   
- miSmartTable: Ng2SmartTableModule={
+ /*miSmartTable: Ng2SmartTableModule={
   columns: {
     juego: {
       title: 'JUEGO'
@@ -34,7 +34,7 @@ export class ListadoDeResultadosComponent implements OnInit {
       title: 'RESULTADO'
     }
   }
-};
+};*/
 
 
 
@@ -49,10 +49,11 @@ export class ListadoDeResultadosComponent implements OnInit {
 
  
 
-  parsear(listado: Array<any>)
+  /*parsear(listado: Array<any>)
   {
-    
-    console.log(this.listado);
-  }
+    this.unString= JSON.stringify(this.listado);
+    this.data= JSON.parse(this.unString);
+    console.log(this.data);
+  }*/
 
 }

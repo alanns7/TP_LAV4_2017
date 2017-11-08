@@ -1,10 +1,9 @@
-<br><br>
 <div align="center" class="titulo">
   <h3>COLORES!</h3><br>
 </div>
 <div align="center" class="titulo">
-<h4>El objetivo del juego es poder dejar todos en un mismo color, ya sea rojo, celeste, azul, amarillo, o verde.<br>
-  Para ello, se debe encontrar el patrón que siguen los mismos al presionarlos.
+<h4>El objetivo del juego es poder dejar todos en un mismo color, ya sea rojo, celeste, azul, amarillo, o verde,<br>
+  en menos de 10 intentos. Para ello, se debe encontrar el patrón que siguen los mismos al presionarlos.
   ¡Que te diviertas!
 </h4>
 </div>
@@ -23,6 +22,14 @@
 
 <input type="button" name= "button5" class="{{color5}}" (click)="Cambio('button5')" value="PRUEBAME" style='width:350px; height:100px'><br><br>
 
+
+<div class="contador">
+        <h3>CONTADOR: {{contador}}</h3>
+</div>
+
+<div class="gano" *ngIf="contador==10">
+        <h3>{{resultado}}</h3>
+    </div>
 
     <!-- <div *ngIf="({{contador}} <= 10) ">
         <p  [hidden]="!juegoCalculo.gano"> Gano</p>

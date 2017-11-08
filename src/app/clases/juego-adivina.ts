@@ -7,10 +7,10 @@ export class JuegoAdivina {
   numeroIngresado:number;
   validador: boolean=false;
   
-   constructor(unNombre:string,jugador:string,gano:boolean) 
+   constructor(unNombre: string, jugador: string, gano: boolean) 
     { 
       this.nombre = unNombre;
-      this.jugador=jugador;
+      this.jugador= jugador;
       this.gano= gano;
     }
     

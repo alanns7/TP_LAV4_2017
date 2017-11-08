@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Juego } from '../../clases/juego';
+import { JuegoAnagrama } from '../../clases/juego-anagrama';
 import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({

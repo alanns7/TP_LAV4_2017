@@ -16,9 +16,9 @@
         
         <input type="text" name="palabraDelUsuario" [(ngModel)]="miJuego.palabraDelUsuario"><br><br>
         
-        <input type="button" name= "Verificar" class="btn btn-primary" (click)="miJuego.Verificar(miJuego.palabraDelUsuario)" value="VERIFICAR" style='width:250px; height:100px'><br><br>
+        <input type="button" name= "Verificar" class="btn btn-primary" (click)="verificar(miJuego.palabraDelUsuario)" value="VERIFICAR" style='width:250px; height:100px'><br><br>
 
-        <input type="button" name= "Rendicion" class="btn btn-danger" (click)="miJuego.Rendirse()" value="ME RINDO" style='width:250px; height:100px'><br><br>
+        <input type="button" name= "Rendicion" class="btn btn-danger" (click)="rendirse()" value="ME RINDO" style='width:250px; height:100px'><br><br>
         
         <div class="contador">
         <h3>CONTADOR: {{miJuego.contador}}</h3>
@@ -26,7 +26,6 @@
   </div>
 
 
-  <div *ngIf="miJuego.contador==3">
-      <p  [hidden]="!miJuego.gano"> Gano</p>
-      <p [hidden]="miJuego.gano"> No Gano</p>
+  <div class="gano">
+      <h3>{{miJuego.resultado}}</h3>
   </div>

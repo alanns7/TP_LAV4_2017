@@ -9,6 +9,16 @@ export class JuegoAnagrama {
     numeroRandom:number=0;
     nombre: string='';
     jugador: string='';
+    resultado: string='';
+
+
+    constructor(unNombre?: string, jugador?: string, gano?: boolean)
+    {
+        this.nombre = unNombre;
+        this.jugador= jugador;
+        this.gano= gano;
+    }
+
 
     Comenzar()
     {
@@ -56,9 +66,11 @@ export class JuegoAnagrama {
         if(unaPalabra!='' && unaPalabra!= null){
 
             unaPalabra= unaPalabra.toUpperCase();
+            console.log(unaPalabra);
 
             if(unaPalabra == this.palabrasOrdenadas[this.numeroRandom]){
                 this.gano=true;
+                this.resultado="GANO!"
                 this.contador=0;
             }
             else{
@@ -68,6 +80,7 @@ export class JuegoAnagrama {
             if(this.contador==3)
             {
                 this.gano=false;
+                this.resultado="PERDIO!"
                 this.Next();
                 this.contador=0;
             }
@@ -77,6 +90,7 @@ export class JuegoAnagrama {
     Rendirse()
     {   
         this.gano=false;
+        this.resultado="PERDIO!"
         this.Next();
     }
     

@@ -5,6 +5,7 @@ import { Juego } from '../clases/Juego';
 export class JuegoServiceService {
 
   miArray: Array<Juego>;
+  unUsuario: string;
 
   constructor( ) {
   this.miArray = new Array<Juego>();
@@ -20,4 +21,13 @@ export class JuegoServiceService {
     this.miArray.concat(array);
   }
 
+  public cargarUsuario(nombreUsuario: string)
+  {
+    this.unUsuario= nombreUsuario;
+  }
+
+  public retornarUsuario()
+  { 
+    return this.unUsuario;
+  }
 }

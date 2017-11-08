@@ -2,3 +2,18 @@
     color: rgb(6, 138, 247);
     font-family: cursive; 
 }
+
+.contador{
+    color: rgb(10, 45, 73);
+    left: 100px;
+    top: 600px;
+    position:absolute;
+
+}
+
+.gano{
+    color: rgb(10, 45, 73);
+    left: 1050px;
+    top: 600px;
+    position:absolute;
+}

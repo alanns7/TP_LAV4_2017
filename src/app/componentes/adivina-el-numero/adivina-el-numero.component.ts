@@ -14,13 +14,11 @@ export class AdivinaElNumeroComponent implements OnInit {
     @Output()
     enviarJuego:EventEmitter<any>= new EventEmitter<any>();
 
-    usuario: string;
-    
-    constructor() 
+    constructor(private miServicio?: JuegoServiceService) 
     { 
       
     }
-  
+
     generar()
     {
       this.unJuego = new JuegoAdivina("Adivina","Alan",true);
@@ -29,22 +27,17 @@ export class AdivinaElNumeroComponent implements OnInit {
   
     verificar()
     {
+      this.unJuego.jugador = this.miServicio.retornarUsuario();
+     
       if(this.unJuego.Verificar())
-      this.enviarJuego.emit(this.unJuego);
-      else
-      {
         this.enviarJuego.emit(this.unJuego);
-      }
+      else
+        this.enviarJuego.emit(this.unJuego);
     }
     
     ngOnInit() {
       this.generar();
     }
 
-    tomarUsuario(unUsuario: string)
-    {
-      this.usuario = unUsuario;
-      console.log("Estoy en listado "+ this.usuario);
-    }
 
 }

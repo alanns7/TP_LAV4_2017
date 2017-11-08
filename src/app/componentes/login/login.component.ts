@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   clave= '';
   logeando=true;
 
-  constructor(private route: ActivatedRoute, private router: Router, miServicio?: JuegoServiceService)
+  constructor(private route: ActivatedRoute, private router: Router, public miServicio?: JuegoServiceService)
   {
 
   }
@@ -29,9 +29,10 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
+
     if (this.usuario != '' && this.clave != '') 
     { 
-      this.enviarUsuario.emit(this.usuario);
+      this.miServicio.cargarUsuario(this.usuario);
       this.router.navigate(['/Principal']);
     }
     

@@ -18,8 +18,8 @@ export class MenuComponent implements OnInit {
 
   Juego(tipo: string) {
     switch (tipo) {
-      case 'PPT':
-          this.router.navigate(['/Juegos/PPT']);
+      case 'PPTMasListado':
+          this.router.navigate(['/Juegos/PPTMasListado']);
         break;
       case 'AdivinaMasListado':
           this.router.navigate(['/Juegos/AdivinaMasListado']);
@@ -27,11 +27,11 @@ export class MenuComponent implements OnInit {
       case 'AgilidadMasListado':
           this.router.navigate(['/Juegos/AgilidadaMasListado']);
         break;
-      case 'Colores':
-        this.router.navigate(['/Juegos/Colores']);
+      case 'ColoresMasListado':
+        this.router.navigate(['/Juegos/ColoresMasListado']);
         break;
-      case 'Anagrama':
-      this.router.navigate(['/Juegos/Anagrama']);
+      case 'AnagramaMasListado':
+      this.router.navigate(['/Juegos/AnagramaMasListado']);
         break;
       case 'Listado':
         this.router.navigate(['/Listado']);

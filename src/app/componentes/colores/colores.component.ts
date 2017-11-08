@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { JuegoColores } from '../../clases/juego-colores';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-colores',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColoresComponent implements OnInit {
 
-  constructor() { }
+  unJuego: JuegoColores;
+  
+    @Output()
+    enviarJuego:EventEmitter<any>= new EventEmitter<any>();
+
+  constructor(private miServicio?: JuegoServiceService) 
+  { 
+    this.unJuego = new JuegoColores("Colores","Alan",true);
+  }
 
   public color1:String ="btn btn-danger";
   public color2:String ="btn btn-success";
@@ -15,9 +25,10 @@ export class ColoresComponent implements OnInit {
   public color4:String ="btn btn-warning";
   public color5:String ="btn btn-info";
   public contador: number=0;
-  public gano:boolean;
+  public resultado:string;
 
   ngOnInit() {
+    
   }
 
   Cambio(boton: String)
@@ -30,6 +41,7 @@ export class ColoresComponent implements OnInit {
         this.color4=this.Next(this.color4);
         this.color5=this.Next(this.color5);
         this.contador++;
+        this.Verificar();
         break;
       }
       case "button2":
@@ -38,6 +50,7 @@ export class ColoresComponent implements OnInit {
         this.color3=this.Next(this.color3);
         this.color4=this.Next(this.color4);
         this.contador++;
+        this.Verificar();
         break;
       }
       case "button3":
@@ -46,6 +59,7 @@ export class ColoresComponent implements OnInit {
         this.color1=this.Next(this.color1);
         this.color2=this.Next(this.color2);
         this.contador++;
+        this.Verificar();
         break;
       }
       case "button4":
@@ -54,6 +68,7 @@ export class ColoresComponent implements OnInit {
         this.color5=this.Next(this.color5);
         this.color3=this.Next(this.color3);
         this.contador++;
+        this.Verificar();
         break;
       }
       case "button5":
@@ -62,6 +77,7 @@ export class ColoresComponent implements OnInit {
         this.color3=this.Next(this.color3);
         this.color4=this.Next(this.color4);
         this.contador++;
+        this.Verificar();
         break;
       }
     }
@@ -69,14 +85,21 @@ export class ColoresComponent implements OnInit {
 
   Verificar()
   {
-    if((this.color1==this.color2) && (this.color2==this.color3) && (this.color3==this.color4) &&
-    (this.color4==this.color5) && this.contador<=10)
-    {
-      this.gano=true;
-    }
-    else
-    this.gano=false;
-
+      if((this.color1==this.color2) && (this.color2==this.color3) && (this.color3==this.color4) &&
+      (this.color4==this.color5) && this.contador<=10)
+      {
+        this.unJuego.gano=true;
+        this.resultado="GANO!";
+        this.unJuego.jugador= this.miServicio.retornarUsuario();
+        this.enviarJuego.emit(this.unJuego);
+      }
+      else if(this.contador==10)
+      {
+      this.unJuego.gano=false;
+      this.resultado="PERDIO!";
+      this.unJuego.jugador = this.miServicio.retornarUsuario();
+      this.enviarJuego.emit(this.unJuego);
+      }
   }
 
 

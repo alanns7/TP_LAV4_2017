@@ -22,7 +22,9 @@ import { ListadoDePaisesComponent } from '../componentes/listado-de-paises/lista
 import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-google.component'
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 import { ColoresComponent } from '../componentes/colores/colores.component';
+import { ColoresMasListadoComponent } from '../componentes/colores-mas-listado/colores-mas-listado.component';
 import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { PiedraPapelTijeraMasListadoComponent } from '../componentes/piedra-papel-tijera-mas-listado/piedra-papel-tijera-mas-listado.component';
 import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { AnagramaMasListadoComponent } from '../componentes/anagrama-mas-listado/anagrama-mas-listado.component';
 
@@ -48,7 +50,9 @@ children:
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'Colores' , component: ColoresComponent},
+      {path: 'ColoresMasListado' , component: ColoresMasListadoComponent},
       {path: 'PPT' , component: PiedraPapelTijeraComponent},
+      {path: 'PPTMasListado' , component: PiedraPapelTijeraMasListadoComponent},
       {path: 'Anagrama' , component: AnagramaComponent},
       {path: 'AnagramaMasListado' , component: AnagramaMasListadoComponent}
     ]

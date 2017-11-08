@@ -17,8 +17,15 @@
 
 .contador{
     color: rgb(10, 45, 73);
-    left: 850px;
-    top: 550px;
+    left: 150px;
+    top: 560px;
     position:absolute;
 
+}
+
+.gano{
+    color: rgb(10, 45, 73);
+    left: 810px;
+    top: 560px;
+    position:absolute;
 }
