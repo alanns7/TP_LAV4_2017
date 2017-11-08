@@ -11,6 +11,8 @@ export class MenuComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private router: Router) { }
 
+    nombreUsuario: String;
+
   ngOnInit() {
   }
 
@@ -31,8 +33,16 @@ export class MenuComponent implements OnInit {
       case 'Anagrama':
       this.router.navigate(['/Juegos/Anagrama']);
         break;
+      case 'Listado':
+        this.router.navigate(['/Listado']);
+        break;
       
     }
+  }
+
+  TomarUsuario(usuario: String)
+  {
+    this.nombreUsuario = usuario;
   }
 
 }

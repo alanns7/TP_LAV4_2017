@@ -11,14 +11,39 @@ import {TimerObservable} from "rxjs/observable/TimerObservable";
 export class AgilidadAritmeticaComponent implements OnInit {
   /* @Output() 
   enviarJuego :EventEmitter<any>= new EventEmitter<any>();*/
-  juegoCalculo: JuegoAgilidad;
+  unJuego: JuegoAgilidad;
+
+  @Output()
+  enviarJuego:EventEmitter<any>= new EventEmitter<any>();
+
+  usuario: string;
   
     constructor()
      { 
-        this.juegoCalculo = new JuegoAgilidad();
+      this.unJuego = new JuegoAgilidad("Agilidad","Alan",true);
      }
      
     ngOnInit() {
+      this.generar();
     }
+
+    generar()
+    {
+      this.unJuego.Jugar();
+      if(this.unJuego.contador==3)
+      {
+        this.verificar();
+      }
+    }
+ 
+    verificar()
+    {
+      this.unJuego.Verificar();
+      this.enviarJuego.emit(this.unJuego);
+    }
+    
+    
+    
+
 
 }

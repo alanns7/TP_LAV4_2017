@@ -7,6 +7,8 @@ export class JuegoAnagrama {
     gano: boolean;
     contador: number=0;
     numeroRandom:number=0;
+    nombre: string='';
+    jugador: string='';
 
     Comenzar()
     {
@@ -52,7 +54,8 @@ export class JuegoAnagrama {
     Verificar(unaPalabra: string)
     {   
         if(unaPalabra!='' && unaPalabra!= null){
-            console.log("Verificar"+unaPalabra);
+
+            unaPalabra= unaPalabra.toUpperCase();
 
             if(unaPalabra == this.palabrasOrdenadas[this.numeroRandom]){
                 this.gano=true;

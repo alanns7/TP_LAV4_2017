@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Juego } from '../../clases/juego';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-anagrama-mas-listado',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnagramaMasListadoComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  public listadoParaCompartir: Array<any>;
+  
+    constructor(public servicioJuego: JuegoServiceService) 
+    { 
+      this.listadoParaCompartir = new Array<any>()
+    }
+  
+    ngOnInit() {
+  
+      this.listadoParaCompartir=this.servicioJuego.inicializarLista();  
+    }
+  
+    tomarJuegoTerminado(juego: Juego)
+    {
+      this.listadoParaCompartir.push(juego);
+      this.servicioJuego.cargarLista(this.listadoParaCompartir); 
+    }
 
 }

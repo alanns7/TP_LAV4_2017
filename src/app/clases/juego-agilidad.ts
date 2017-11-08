@@ -15,11 +15,12 @@ export class JuegoAgilidad {
     ronda: number=0;
     
     
-     constructor() 
-      { 
-        
-       
-      }
+    constructor(unNombre:string,jugador:string,gano:boolean) 
+    { 
+      this.nombre = unNombre;
+      this.jugador=jugador;
+      this.gano= gano;
+    }
     
     GenerarNuevo()
     {
@@ -91,20 +92,26 @@ export class JuegoAgilidad {
     
             if(this.contador<=2)
             this.Jugar();
-    
+            
+           
         }
         
         
-        else if(this.correcto > this.incorrecto)
+        this.Verificar();
+    
+       // console.info("contador: " + this.contador);
+    }
+
+    Verificar()
+    {
+        if(this.correcto > this.incorrecto)
         {
             this.gano=true;
         }
         else{
             this.gano=false;
         }
-    
-       // console.info("contador: " + this.contador);
-        
-    
     }
+
+
 }

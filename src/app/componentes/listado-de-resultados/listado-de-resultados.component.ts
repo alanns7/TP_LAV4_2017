@@ -1,6 +1,7 @@
 
 import { Component, OnInit , Input, EventEmitter} from '@angular/core';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-listado-de-resultados',
@@ -8,19 +9,26 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
   styleUrls: ['./listado-de-resultados.component.css']
 })
 export class ListadoDeResultadosComponent implements OnInit {
+  
  @Input()
- listado: Array<any>;
+ listado: any;
 
- miJson= {nombre:"Asjads",ape:"sads"};
+ unString:string;
+
+ ngOnChanges(){ }
+
+ 
+ usuario: String;
+ data: Array<any>;
  
   
  miSmartTable: Ng2SmartTableModule={
   columns: {
-    jugador: {
-      title: 'JUGADOR'
-    },
     juego: {
       title: 'JUEGO'
+    },
+    usuario: {
+      title: 'USUARIO'
     },
     resultado: {
       title: 'RESULTADO'
@@ -28,41 +36,23 @@ export class ListadoDeResultadosComponent implements OnInit {
   }
 };
 
-data = [
-  {
-    id: 1,
-    name: "Leanne Graham",
-    username: "Bret",
-    email: "Sincere@april.biz"
-  },
-  {
-    id: 2,
-    name: "Ervin Howell",
-    username: "Antonette",
-    email: "Shanna@melissa.tv"
-  },
-  
-  // ... list of items
-  
-  {
-    id: 11,
-    name: "Nicholas DuBuque",
-    username: "Nicholas.Stanton",
-    email: "Rey.Padberg@rosamond.biz"
-  }
-];
 
 
-  constructor() {
+  constructor(miServicio: JuegoServiceService) {
+    
    }
 
   ngOnInit() {
-    localStorage.setItem('token', JSON.stringify(this.data));
-    console.log(localStorage.getItem('token'));//probar json.parse porque devuelve un string
+   /* localStorage.setItem('token', JSON.stringify(this.data));
+    console.log(localStorage.getItem('token'));//probar json.parse porque devuelve un string*/
   }
 
-  ver() {
-    console.info(this.listado);
+ 
+
+  parsear(listado: Array<any>)
+  {
+    
+    console.log(this.listado);
   }
 
 }

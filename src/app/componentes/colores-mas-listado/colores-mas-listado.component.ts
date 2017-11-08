@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Juego } from '../../clases/juego';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-colores-mas-listado',
@@ -9,16 +10,21 @@ import { Juego } from '../../clases/juego';
 export class ColoresMasListadoComponent implements OnInit {
 
   public listadoParaCompartir: Array<any>;
-  constructor() { this.listadoParaCompartir = new Array<any>()}
-
-  ngOnInit() {
-    
-  }
-
-  tomarJuegoTerminado(juego: Juego)
-  {
-    this.listadoParaCompartir.push(juego);
-   // console.info("en app",this.listadoParaCompartir);
-  }
+  
+    constructor(public servicioJuego: JuegoServiceService) 
+    { 
+      this.listadoParaCompartir = new Array<any>()
+    }
+  
+    ngOnInit() {
+  
+      this.listadoParaCompartir=this.servicioJuego.inicializarLista();  
+    }
+  
+    tomarJuegoTerminado(juego: Juego)
+    {
+      this.listadoParaCompartir.push(juego);
+      this.servicioJuego.cargarLista(this.listadoParaCompartir); 
+    }
 
 }

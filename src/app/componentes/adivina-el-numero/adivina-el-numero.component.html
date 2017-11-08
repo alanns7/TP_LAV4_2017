@@ -14,4 +14,9 @@
   <div class="alert alert-success" [hidden]="!unJuego.gano"> ¡Excelente! Usted ha adivinado</div >
   <div class="alert alert-danger" [hidden]="unJuego.gano"> ¡Esta vez no se pudo! ¡Sigue jugando!</div>
 </div>
+
+<div *ngIf="false">
+    <app-login (enviarUsuario)="tomarUsuario($event)"></app-login>
+</div> 
+
   </div>

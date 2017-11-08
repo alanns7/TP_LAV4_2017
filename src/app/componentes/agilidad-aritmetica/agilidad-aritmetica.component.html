@@ -5,23 +5,20 @@
     </div>
         <br><br>
 
-<input type="text"value="{{juegoCalculo.numero1}}" name="num1">
+<input type="text"value="{{unJuego.numero1}}" name="num1">
 
-<input type="text" value="{{juegoCalculo.operadorCaracter}}" name="signo" >
+<input type="text" value="{{unJuego.operadorCaracter}}" name="signo" >
 
-<input type="text" value="{{juegoCalculo.numero2}}" name="num2"><br><br>
+<input type="text" value="{{unJuego.numero2}}" name="num2"><br><br><br>
 
-<input type="button" class="btn btn-primary" value="JUGAR" name="jugar" (click)="juegoCalculo.Jugar()"><br><br>
+<input type="text" placeholder="Escribe la respuesta" [(ngModel)]="unJuego.numeroIngresado" name="numeroIngresado" [ngModelOptions]="{standalone: true}" required><br><br><br>
 
-<input type="text" placeholder="Escribe la respuesta" [(ngModel)]="juegoCalculo.numeroIngresado" name="numeroIngresado" [ngModelOptions]="{standalone: true}" required><br><br>
+<input type="button" class="btn btn-primary" value="SIGUIENTE" name="siguiente" (click)="unJuego.Siguiente()"><br><br>
 
-<input type="button" class="btn btn-primary" value="SIGUIENTE" name="siguiente" (click)="juegoCalculo.Siguiente()"><br><br>
+<h3>Ronda Numero: {{unJuego.ronda}}</h3>
 
-<p>Ronda Numero: {{juegoCalculo.ronda}}</p>
-
-<div *ngIf="juegoCalculo.contador==3">
-<p  [hidden]="!juegoCalculo.gano"> Gano</p>
-<p [hidden]="juegoCalculo.gano"> No Gano</p>
+<div *ngIf="unJuego.contador==3">
+        <input type="button" class="btn btn-warning" value="VERIFICAR" name="verificar" (click)="verificar()"><br><br>
 </div>
 
 </div>

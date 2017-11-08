@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input,Output,EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 import {Subscription} from "rxjs";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
@@ -11,13 +12,16 @@ import {TimerObservable} from "rxjs/observable/TimerObservable";
 export class LoginComponent implements OnInit {
 
   private subscription: Subscription;
-  usuario = '';
+  @Output()
+  enviarUsuario:EventEmitter<any>= new EventEmitter<any>();
+
+  usuario:string = '';
   clave= '';
   logeando=true;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, miServicio?: JuegoServiceService)
+  {
+
   }
 
   ngOnInit() {
@@ -25,10 +29,12 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    if (this.usuario === 'admin' && this.clave === 'admin') {
+    if (this.usuario != '' && this.clave != '') 
+    { 
+      this.enviarUsuario.emit(this.usuario);
       this.router.navigate(['/Principal']);
     }
-    console.log("asd"+this.usuario);
+    
   }
 
 }
