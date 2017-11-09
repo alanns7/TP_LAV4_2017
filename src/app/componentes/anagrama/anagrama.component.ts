@@ -40,11 +40,12 @@ export class AnagramaComponent implements OnInit {
     this.miJuego.jugador= this.miServicio.retornarUsuario();
     this.enviarJuego.emit(this.miJuego);
     }
+    
   }
 
   comienzo()
   {
-    this.miJuego = new JuegoAnagrama("Anagrama","Alan",true);
+    
     this.miJuego.Comenzar();
   }
   /* this.unJuego.nombre= this.miServicio.retornarUsuario();
