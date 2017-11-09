@@ -41,7 +41,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
     verificar()
     {
       this.unJuego.Verificar();
-      this.unJuego.nombre= this.miServicio.retornarUsuario();
+      this.unJuego.jugador= this.miServicio.retornarUsuario();
       this.enviarJuego.emit(this.unJuego);
     }
 

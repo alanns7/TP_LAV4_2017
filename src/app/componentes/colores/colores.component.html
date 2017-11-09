@@ -27,8 +27,9 @@
         <h3>CONTADOR: {{contador}}</h3>
 </div>
 
-<div class="gano" *ngIf="contador==10">
-        <h3>{{resultado}}</h3>
+<div class="gano" *ngIf="contador==0">
+        <h3>{{resultado}}</h3><br><br>
+        <button type=button class="button button1" value="Volver a jugar" name="Nuevo" (click)="generar()">Volver a jugar</button><br><br>
     </div>
 
     <!-- <div *ngIf="({{contador}} <= 10) ">

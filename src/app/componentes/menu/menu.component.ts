@@ -42,6 +42,12 @@ export class MenuComponent implements OnInit {
       case 'Login':
         this.router.navigate(['/Login']);
         break;
+      case 'Principal':
+        this.router.navigate(['/Principal']);
+        break;
+      case 'menu-card':
+        this.router.navigate(['/MenuCard']);
+        break;
       
     }
   }

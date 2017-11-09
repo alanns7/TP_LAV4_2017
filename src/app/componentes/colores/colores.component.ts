@@ -24,7 +24,7 @@ export class ColoresComponent implements OnInit {
   public color3:String ="btn btn-primary";
   public color4:String ="btn btn-warning";
   public color5:String ="btn btn-info";
-  public contador: number=0;
+  public contador: number=10;
   public resultado:string;
 
   ngOnInit() {
@@ -40,7 +40,7 @@ export class ColoresComponent implements OnInit {
         this.color2=this.Next(this.color2);
         this.color4=this.Next(this.color4);
         this.color5=this.Next(this.color5);
-        this.contador++;
+        this.contador--;
         this.Verificar();
         break;
       }
@@ -49,7 +49,7 @@ export class ColoresComponent implements OnInit {
         this.color1=this.Next(this.color1);
         this.color3=this.Next(this.color3);
         this.color4=this.Next(this.color4);
-        this.contador++;
+        this.contador--;
         this.Verificar();
         break;
       }
@@ -58,7 +58,7 @@ export class ColoresComponent implements OnInit {
         this.color5=this.Next(this.color5);
         this.color1=this.Next(this.color1);
         this.color2=this.Next(this.color2);
-        this.contador++;
+        this.contador--;
         this.Verificar();
         break;
       }
@@ -67,7 +67,7 @@ export class ColoresComponent implements OnInit {
         this.color1=this.Next(this.color1);
         this.color5=this.Next(this.color5);
         this.color3=this.Next(this.color3);
-        this.contador++;
+        this.contador--;
         this.Verificar();
         break;
       }
@@ -76,7 +76,7 @@ export class ColoresComponent implements OnInit {
         this.color2=this.Next(this.color2);
         this.color3=this.Next(this.color3);
         this.color4=this.Next(this.color4);
-        this.contador++;
+        this.contador--;
         this.Verificar();
         break;
       }
@@ -86,14 +86,14 @@ export class ColoresComponent implements OnInit {
   Verificar()
   {
       if((this.color1==this.color2) && (this.color2==this.color3) && (this.color3==this.color4) &&
-      (this.color4==this.color5) && this.contador<=10)
+      (this.color4==this.color5) && this.contador>0)
       {
         this.unJuego.gano=true;
         this.resultado="GANO!";
         this.unJuego.jugador= this.miServicio.retornarUsuario();
         this.enviarJuego.emit(this.unJuego);
       }
-      else if(this.contador==10)
+      else if(this.contador==0)
       {
       this.unJuego.gano=false;
       this.resultado="PERDIO!";
@@ -142,7 +142,10 @@ export class ColoresComponent implements OnInit {
   }
 
 
-
+generar()
+{
+  this.contador=10;
+}
 
 
 }

@@ -16,7 +16,7 @@ export class AnagramaComponent implements OnInit {
 
   constructor(private miServicio?: JuegoServiceService) 
   { 
-    this.miJuego = new JuegoAnagrama("Anagrama","Alan",true);
+    this.miJuego = new JuegoAnagrama("Anagrama","Alan",false);
   }
 
 
@@ -39,13 +39,19 @@ export class AnagramaComponent implements OnInit {
     {
     this.miJuego.jugador= this.miServicio.retornarUsuario();
     this.enviarJuego.emit(this.miJuego);
+    this.miJuego.Next();
+    this.miJuego.gano=false;
     }
     
   }
 
+  jugar()
+  {
+    this.comienzo();
+  }
+
   comienzo()
   {
-    
     this.miJuego.Comenzar();
   }
   /* this.unJuego.nombre= this.miServicio.retornarUsuario();

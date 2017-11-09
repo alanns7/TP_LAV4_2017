@@ -17,3 +17,29 @@
     top: 600px;
     position:absolute;
 }
+
+.button {
+    background-color: rgb(255, 255, 255); 
+    border: none;
+    color: rgb(6, 138, 247);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 4px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: rgb(6, 138, 247); 
+    color: black; 
+    border: 4px solid rgb(6, 138, 247);
+}
+
+.button1:hover {
+    background-color: white;
+    color: rgb(6, 138, 247);
+    font-size: 32px;
+}

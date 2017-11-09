@@ -59,6 +59,7 @@ export class JuegoAnagrama {
     {   
         this.numeroRandom=Math.floor((Math.random() * 12) + 0);
         this.palabraAJugar = this.palabrasDesordenadas[this.numeroRandom];
+        
     }
 
     Verificar(unaPalabra: string)
@@ -67,8 +68,9 @@ export class JuegoAnagrama {
 
             unaPalabra= unaPalabra.toUpperCase();
             console.log(unaPalabra);
+            console.log(this.palabrasOrdenadas[this.numeroRandom])
 
-            if(unaPalabra == this.palabrasOrdenadas[this.numeroRandom]){
+            if(unaPalabra === this.palabrasOrdenadas[this.numeroRandom]){
                 this.gano=true;
                 this.resultado="GANO!"
                 this.contador=0;
@@ -82,7 +84,6 @@ export class JuegoAnagrama {
                 this.gano=false;
                 this.resultado="PERDIO!"
                 this.Next();
-                this.contador=0;
             }
         }
     }   
