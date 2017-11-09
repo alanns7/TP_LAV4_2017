@@ -35,12 +35,14 @@ export class AnagramaComponent implements OnInit {
   verificar(laPalabra: string)
   {
     this.miJuego.Verificar(laPalabra);
+
     if(this.miJuego.contador==3 || this.miJuego.gano==true)
     {
     this.miJuego.jugador= this.miServicio.retornarUsuario();
+    console.log(this.miJuego);
     this.enviarJuego.emit(this.miJuego);
     this.miJuego.Next();
-    this.miJuego.gano=false;
+    this.miJuego = new JuegoAnagrama("Anagrama","Alan",false);
     }
     
   }
@@ -53,6 +55,7 @@ export class AnagramaComponent implements OnInit {
   comienzo()
   {
     this.miJuego.Comenzar();
+    this.miJuego.contador=0;
   }
   /* this.unJuego.nombre= this.miServicio.retornarUsuario();
       this.enviarJuego.emit(this.unJuego);*/

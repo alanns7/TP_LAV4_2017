@@ -74,6 +74,7 @@ export class JuegoAnagrama {
                 this.gano=true;
                 this.resultado="GANO!"
                 this.contador=0;
+                console.log(this);
             }
             else{
                 this.contador++;
