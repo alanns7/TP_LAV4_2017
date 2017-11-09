@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  Juego(tipo: string) {
+  Menu(tipo: string) {
     switch (tipo) {
       case 'PPTMasListado':
           this.router.navigate(['/Juegos/PPTMasListado']);
@@ -36,13 +36,16 @@ export class MenuComponent implements OnInit {
       case 'Listado':
         this.router.navigate(['/Listado']);
         break;
+      case 'QuienSoy':
+        this.router.navigate(['/QuienSoy']);
+        break;
+      case 'Login':
+        this.router.navigate(['/Login']);
+        break;
       
     }
   }
 
-  TomarUsuario(usuario: String)
-  {
-    this.nombreUsuario = usuario;
-  }
+  
 
 }

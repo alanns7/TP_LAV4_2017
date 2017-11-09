@@ -37,19 +37,19 @@
             <li class="active"><a href="#">Inicio</a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Juegos<span class="caret"></span></a>
               <ul class="dropdown-menu" style="cursor:pointer">
-                  <li><a  (click)="Juego('AdivinaMasListado')">Adivina</a></li>
-                  <li><a  (click)="Juego('AgilidadMasListado')">Agilidad</a></li>
-                  <li><a  (click)="Juego('PPTMasListado')">Piedra,Papel,Tijera</a></li>
-                  <li><a  (click)="Juego('AnagramaMasListado')">Anagrama</a></li>
-                  <li><a  (click)="Juego('ColoresMasListado')">Colores</a></li>
+                  <li><a  (click)="Menu('AdivinaMasListado')">Adivina</a></li>
+                  <li><a  (click)="Menu('AgilidadMasListado')">Agilidad</a></li>
+                  <li><a  (click)="Menu('PPTMasListado')">Piedra,Papel,Tijera</a></li>
+                  <li><a  (click)="Menu('AnagramaMasListado')">Anagrama</a></li>
+                  <li><a  (click)="Menu('ColoresMasListado')">Colores</a></li>
               </ul>
             </li>
-            <li><a  (click)="Juego('Listado')" style="cursor:pointer">Listado</a></li>
+            <li><a  (click)="Menu('Listado')" style="cursor:pointer">Listado</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/QuienSoy"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
+            <li><a (click)="Menu('QuienSoy')"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
             <li><a href="https://github.com/alanns7"target="_blank">en GitHub <i class="fa fa-github"></i></a></li>
-            <li><a href="/Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a (click)="Menu('Login')"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
         </div>
       </nav>
